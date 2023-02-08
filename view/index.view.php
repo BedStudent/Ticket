@@ -1,10 +1,8 @@
 <?php
-// if(isset($_POST['print'])){
-//    $bagazas = $_POST['bagazas']
-
- //}
+  if(isset($_POST['submit'])){
+    saveMessage($_POST);
+  }
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -88,13 +86,13 @@
 </form>
 <section>
     <h2 class='bg-primary text-center'>Bilietai</h2>
-    <?php foreach(getInfo() as $list):?>
+    <?php foreach( getData() as $list):?>
     <div class='row'>
         <?php $list = explode(',',$list);?>
-        <?php foreach($list as $GautiDuomenys):?>
-            <?php if(!empty($GautiDuomenys)):?>
-        <div class="col-3">Is <?=$GautiDuomenys?></div>
-        <div class="col-3">I <?=$GautiDuomenys?></div>
+        <?php foreach($list as $item):?>
+            <?php if(!empty($item)):?>
+        <div class="col-3">Is <?=$item?></div>
+        <div class="col-3">I <?=$item?></div>
         <?php endif;?>
         <?php endforeach;?>
     </div>
