@@ -85,18 +85,25 @@
 </div>
 </form>
 <section>
-    <h2 class='bg-primary text-center'>Bilietai</h2>
+   <h2 class='bg-primary text-center'>Bilietai</h2>
     <?php foreach( getData() as $list):?>
     <div class='row'>
         <?php $list = explode(',',$list);?>
         <?php foreach($list as $item):?>
             <?php if(!empty($item)):?>
-        <div class="col-3">Is <?=$item?></div>
-        <div class="col-3">I <?=$item?></div>
+        <div class="col-3 bg-warning">Is <?=$list[0];?></div>
+        <div class="col-3 bg-succes">I <?=$list[1];?></div>
+        <div class="col-3 bg-danger">Bagazas <?=$list[2];?></div>
+        <div class="col-3 bg-info">Vardas <?=$list[4];?></div>
+        <div class="col-3 bg-primary">Pavarde <?=$list[5];?></div>
+        <div class="col-3 bg-danger">AsmensKodas <?=$list[6];?></div>
+        <div class="col-3 bg-primary">Zinute: <?=$list[3];?></div>
         <?php endif;?>
         <?php endforeach;?>
     </div>
-    <?php endforeach;?>
+    ------------------------------------
+    <?php endforeach;?> 
+
 </section>
 </div>
 </body>
